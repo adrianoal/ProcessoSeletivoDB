@@ -221,7 +221,9 @@ c. Criar script que atualize o novo campo na tabela TELEFONE. O cliente não pas
 
 
 
-5. Cliente informou que a consulta de Vendas não está trazendo dados. Deve ser analisado e corrigido para que a consulta volte a retornar os dados.
+5. Cliente informou que a consulta de Vendas não está trazendo dados. 
+Deve ser analisado e corrigido para que a consulta volte a retornar os dados.
+
 a. Executar o comando: sp_helptext QUESTAO_05 na base de dados
 
 
@@ -246,7 +248,7 @@ exec sp_helptext'QUESTAO_05';
 
 			DECLARE
 
-				@V_RESULT		VARCHAR(5000),
+				@V_RESULT		VARCHAR(5000), -- 1º Erro, ,  no lugar de ;
 
 				@V_NM_REPORT	VARCHAR(1);
 
@@ -294,7 +296,6 @@ exec sp_helptext'QUESTAO_05';
 
 		END
 
-	
 
 
 
