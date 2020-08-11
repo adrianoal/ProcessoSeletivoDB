@@ -1,0 +1,141 @@
+DECLARE 
+
+  g_num NUMBER := 0;                                                  
+  G_customer_id     PRD1OMS.TBAP_CUSTOMER_REF.customer_id%TYPE;       
+  G_ORGANIZATION_ID PRD1OMS.TBAP_CUSTOMER_REF.ORGANIZATION_ID%TYPE;   
+  G_derived_from    PRD1OMS.TBAP_ITEM.DERIVED_FROM%TYPE;              
+  G_item_def_id     PRD1OMS.TBAP_ITEM.ITEM_DEF_ID%TYPE;               
+  G_order_action_id PRD1OMS.TBAP_PRICE_PLAN.ORDER_ACTION_ID%TYPE;     
+  G_SOC             PRD1OMS.TBAP_ITEM.ITEM_DEF_ID%TYPE;               
+
+-----------------------------------------------------------------------------------------------------------------------
+
+  CURSOR LEV_CUR IS      -- CURSOR_PEGA_OS_MAIN_ITEM _AGR_SUB --
+
+-----------------------------------------------------------------------------------------------------------------------
+ 
+    SELECT MAIN_ITEM_ID_SUB AS MAIN_ITEM_ID, MAIN_ITEM_ID_AGR
+      FROM CPCSO.DEF_4543
+     WHERE (STATUS_OFFER LIKE '%MISS IN OMS%' OR
+           STATUS_OFFER_SUB LIKE '%MISS IN OMS%')
+       AND SOC_CD_SUB_OMS IS NULL
+       AND MAIN_ITEM_ID_SUB = '562401911';
+       --AND ROWNUM < 501 
+                          
+  g_LEV_CUR LEV_CUR%ROWTYPE; 
+
+-----------------------------------------------------------------------------------------------------------------------
+
+  CURSOR SUBSCRIBER_CUR IS --CURSOR_PEGA_SUB_TEMPLATE_ABAIXO_DA_MESMA_UND._E_CUSTOMER--
+
+-----------------------------------------------------------------------------------------------------------------------
+
+    SELECT TI.MAIN_ITEM_ID, TI.AP_ID
+      FROM PRD1OMS.TBAP_ITEM TI
+     WHERE TI.MAIN_ITEM_ID IN
+           (select AP_ID
+            from mtaappc.subscriber@taol1_prod
+            where ch_node_id in
+                   (select arc_child_id
+                      from mtaappc.ch_arcs@taol1_prod
+                      where arc_father_id = G_ORGANIZATION_ID) --UNDADE ORG.--
+               AND sub_status = 'A' ---ATIVOS
+               AND AP_ID IS NOT NULL
+               AND CUSTOMER_ID = G_CUSTOMER_ID) --CUSTOMEER--
+       AND TI.ITEM_DEF_ID = '502249801'
+       AND TI.END_DATE > SYSDATE
+       AND TI.STATUS = 'AC'
+       AND TI.STATE = 'AS'
+       and EXISTS (SELECT 1
+             FROM PRD1OMS.TBAP_PRICE_PLAN
+             WHERE AP_ID_DOMINANT = TI.AP_ID
+               AND END_DATE > SYSDATE
+               AND STATUS = 'AC'
+               AND STATE = 'AS');
+
+ g_SUBSCRIBER_CUR SUBSCRIBER_CUR%ROWTYPE; 
+
+------------------------------------------------------------------------------------------------------------------------
+					--VALIDA_ORDENS_PENDENTES--
+--implementacao_adriano
+
+  FUNCTION F_CHK_CEN3(l_main_item_id VARCHAR2) RETURN BOOLEAN IS 
+    l_return NUMBER;
+
+------------------------------------------------------------------------------------------------------------------------
+ BEGIN                    
+   BEGIN
+
+  	SELECT COUNT (1)
+	INTO l_return
+        FROM CPCSO.DBPATCH_INPUT DI
+ 	WHERE 1 = 1
+        AND DBPATCH_ID IN ('def_4543_SNB')
+   	AND MAIN_ITEM_ID = l_main_item_id 
+        ------------------------------
+   	AND (
+        ------------------------------
+        SELECT COUNT(1)
+          FROM CPCSO.DBPATCH_INPUT DI1
+          WHERE DI.MAIN_ITEM_ID = DI1.MAIN_ITEM_ID
+          AND DBPATCH_ID = 'def_4543_SNB') > 1;
+
+         IF l_return > 0 THEN
+
+       	   RETURN TRUE;
+   
+         END IF;
+
+    RETURN FALSE;
+
+
+    EXCEPTION
+
+      WHEN OTHERS THEN 
+    
+  RETURN FALSE;
+  
+
+   END;     
+
+    END F_CHK_CEN3; 
+
+--fim_implementacao_adriano
+
+ 
+------------------------------------------------------------------------------------------------------------------------ 
+
+--INICIO_DO_BLOCO--
+
+BEGIN
+
+  DBMS_OUTPUT.PUT_LINE('INICIO');
+
+  OPEN LEV_CUR;
+
+  LOOP
+
+    FETCH LEV_CUR
+      INTO g_LEV_CUR;
+    EXIT WHEN LEV_CUR%NOTFOUND;
+
+     DBMS_OUTPUT.PUT_LINE('ENTREI_LEV_CUR');
+
+      IF (F_CHK_CEN3(g_LEV_CUR.MAIN_ITEM_ID)) THEN  
+
+             DBMS_OUTPUT.PUT_LINE('ORDEM_PENDENTE' );
+
+      END IF;
+  END LOOP;
+  CLOSE LEV_CUR;
+  DBMS_OUTPUT.PUT_LINE('FIM');
+
+END;--FIM_DO_BLOCO--
+
+-----------------------------------------------------------------------------------
+
+/
+
+ 
+
+QUIT

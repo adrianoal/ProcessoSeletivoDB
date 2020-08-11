@@ -1,0 +1,189 @@
+DECLARE
+
+PROCEDURE   PROC_INSERT_DBPATCH  (l_main_item_id VARCHAR2,
+				  l_item_def_id  VARCHAR2,
+				  l_order_TEMP   VARCHAR2,
+				  l_main_item_id_glp VARCHAR2) AS
+
+BEGIN
+
+DECLARE
+
+ 
+
+g_attr             VARCHAR2(30);
+
+g_attr_value       VARCHAR2(30);
+
+g_dbpatch_id       VARCHAR2(30):= 'def_4543_SNB';
+
+g_main_item_id     VARCHAR2(25):= l_main_item_id;
+
+
+CURSOR OFFERS_CUR IS
+
+	SELECT ORDER_ACTION_ID, AP_ID_DOMINANT, item_def_id, pc_relation_id
+        FROM PRD1OMS.TBAP_PRICE_PLAN
+        WHERE ORDER_ACTION_ID =l_order_TEMP
+        AND ITEM_DEF_ID =l_item_def_id
+        and ap_version_id IN ('1', '0')
+	GROUP BY ORDER_ACTION_ID, AP_ID_DOMINANT, item_def_id, pc_relation_id;
+
+ g_OFFERS_CUR    OFFERS_CUR%rowtype;
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  FUNCTION check_attr (i_offer IN VARCHAR2)
+ RETURN VARCHAR2
+
+   IS
+
+     l_return   VARCHAR2 (50);
+
+   BEGIN
+
+         l_return := '';
+
+
+         SELECT output_val3
+
+           INTO l_return
+
+           FROM cpcso.recon_bo_translation
+
+          WHERE trans_group = 'TRANS_ATTR' AND input_val1 = i_offer
+
+          GROUP BY output_val3;
+
+     
+
+DBMS_OUTPUT.PUT_LINE (l_return);
+
+        
+
+/*     EXCEPTION
+
+          WHEN OTHERS THEN
+
+            l_return:= '0';
+
+         DBMS_OUTPUT.PUT_LINE ('ERRO');   */
+
+ 
+
+      RETURN l_return;
+
+   END check_attr;       
+
+ 
+
+PROCEDURE INSERT_PROC (l_instance_id NUMBER,
+		       l_dbpatch_id  VARCHAR2,
+		       l_main_item_id VARCHAR2,
+		       l_ctdb_cre_datetime DATE,
+		       l_status CHAR,
+		       l_item_def_id VARCHAR2,
+ 		       l_cm_agr_sub_no VARCHAR2,
+		       l_miss_in_appl CHAR,
+ 		       l_queue_id NUMBER,
+		       l_attr_info VARCHAR2,
+		       l_pc_relation_id VARCHAR2,
+		       l_main_item_id_glp VARCHAR2
+            	       )
+  AS
+
+  BEGIN
+
+   
+
+--  select * from cpcso.dbpatch_input
+
+ 
+
+  INSERT INTO cpcso.dbpatch_input
+	       (instance_id, dbpatch_id, main_item_id, ctdb_cre_datetime, status, item_def_id, cm_agr_sub_no, miss_in_appl, queue_id, attribute_info, prev_relation_id, 
+		glp_main_item_id)
+
+         values
+
+         (l_instance_id, l_dbpatch_id, l_main_item_id, l_ctdb_cre_datetime, l_status, l_item_def_id, l_cm_agr_sub_no, l_miss_in_appl, l_queue_id, l_attr_info, 
+	  l_pc_relation_id,l_main_item_id_glp);
+
+  commit;          
+  
+
+ END INSERT_PROC;
+
+--
+
+BEGIN
+
+  
+
+ OPEN OFFERS_CUR;
+
+      LOOP
+
+        FETCH OFFERS_CUR
+
+              INTO g_OFFERS_CUR;
+
+          EXIT WHEN OFFERS_CUR%NOTFOUND;
+
+          g_attr := 'DPTO_Att';
+
+
+SELECT PRD1OMSOWN.getinfofromattributeamm2 (ITEM_ATRS_LIST, ''||g_attr||'')
+
+INTO g_attr_value
+
+FROM PRD1OMS.TBAP_ITEM
+
+WHERE (ORDER_ACTION_ID, AP_ID) IN
+
+(SELECT ORDER_ACTION_ID, AP_ID_DOMINANT
+
+        FROM PRD1OMS.TBAP_PRICE_PLAN
+
+        WHERE ORDER_ACTION_ID = g_OFFERS_CUR.ORDER_ACTION_ID
+
+        AND ITEM_DEF_ID  = g_OFFERS_CUR.ITEM_DEF_ID and ap_version_id IN ( '0','1'))    
+
+;       
+
+ 
+
+DBMS_OUTPUT.PUT_LINE (g_attr||'+'||g_attr_value); 
+
+ 
+
+INSERT_PROC (0,g_dbpatch_id, g_main_item_id, SYSDATE,'IN',g_OFFERS_CUR.ITEM_DEF_ID, 0,'OMS', 0,g_attr||'+'||g_attr_value,g_OFFERS_CUR.pc_relation_id,null);
+         
+
+      END LOOP;
+
+CLOSE OFFERS_CUR;          
+
+ 
+
+   EXCEPTION
+
+          WHEN OTHERS THEN
+
+            
+
+         DBMS_OUTPUT.PUT_LINE ('ERRO INSERT EXC');
+
+    
+
+END;
+
+ 
+
+END PROC_INSERT_DBPATCH; 
+
+  
+
+  BEGIN
+
+--PROC_INSERT_DBPATCH ('1480241317','380407484','53660438','550544545');
+PROC_INSERT_DBPATCH ('1607814066','380407484','428943873','609930579');

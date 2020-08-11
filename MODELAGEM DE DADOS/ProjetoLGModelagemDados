@@ -1,0 +1,68 @@
+LOCADORA
+
+CADASTRO FUNCIONARIO
+				nome 
+				cpf
+				dt_nascimento
+				end
+				telefone
+				email
+				login
+				senha
+				
+
+PRODUTO
+		titulo
+		genero
+		ator
+		tipo (dvd ou bd)
+ASTRO
+	nome
+	
+		
+
+CATALOGO
+
+
+ESTOQUE
+		titulo
+		genero
+		ator
+		astro
+		tipo (dvd ou bd)
+		data_cadastro
+		preco_venda
+		quantidade
+		
+		
+TIPO ENTREGA
+			lancamento 24h
+			especial 48h
+
+CLIENTE
+		nome 
+		cpf
+		dt_nascimento
+		telefone 
+		email
+		
+		
+		
+VIDEO CLUBE
+		fisrt_name
+		last_name
+		data_cadastro
+		telefone
+		rua
+		numero
+		last_update_date
+
+STATUS CREDITO
+		valor
+		data_credito
+		last_update_date
+	
+HISTORICO LOCACAO
+			
+
+

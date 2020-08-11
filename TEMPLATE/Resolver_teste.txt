@@ -1,0 +1,102 @@
+const a = [1, 2, 4, 7, 9, 13]
+
+const r = a.map((el) => {
+  if(el == 2) return el*3;
+  if(el <= 10) return el*4;
+  return el*5;
+})
+        
+--------------------------------------
+y = 1
+
+while y <= x do
+  y = y*2
+end
+        
+----------------------------------------
+Questão 4
+Considerando o código abaixo qual será o estilo final do elemento <div class="principal centralizado">?
+
+div {
+    border: 1px solid red;
+    color: orange;
+}
+
+.principal {
+    background-color: blue;
+    color: white;
+}
+
+.centralizado {
+    width: 700px;
+    margin: 0 auto;
+}
+----------------------------------------------------------------------------------------------------
+Questão 5
+Sobre CSS, avalie o código abaixo e marque a alternativa verdadeira:
+
+div {
+    width: 290px;
+    padding: 10px;
+    border: 5px solid gray;
+    margin: 0;
+}
+------------------------------------------------------------------------------------------------
+Questão 6
+Uma funcionalidade importante em HTML é a capacidade de redimensionar imagens utilizando as propriedades da tag. Qual das alternativas 
+redimensiona uma imagem para 300px de largura e 450px de altura?
+
+selecione apenas uma alternativa
+
+---------------------------------------------------------------------
+Questão 7
+O que ocorrerá após a execução do script SQL abaixo?:
+
+  
+CREATE TABLE TB1 
+(id INT(6) 
+UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+nome VARCHAR(30) NOT NULL, 
+email VARCHAR(50));
+
+INSERT INTO TB1 (id, nome) VALUES (1, "ALUNO 1");
+INSERT INTO TB1 (id, nome) VALUES (2, "ALUNO 2");
+INSERT INTO TB1 (id, nome) VALUES (1, "ALUNO 3");
+
+-----------------------------------------------------------------------------------
+Questão 8
+Dado o script SQL abaixo, qual query retorna apenas o product_id dos produtos que possuem pelo menos 2 vendas com desconto?
+
+  
+DROP TABLE IF EXISTS sales;
+CREATE TABLE sales (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  product_id INT(6) NOT NULL,
+  discount_percent decimal(3,3)
+);
+
+INSERT INTO sales(id, product_id, discount_percent)
+VALUES
+(1, 1, 0.02),
+(2, 2, 0.00),
+(3, 1, 0.00),
+(4, 2, 0.00),
+(5, 1, 0.05),
+(6, 2, 0.05),
+(7, 3, 0.03),
+(8, 3, 0.02),
+(9, 3, 0.05);
+
+
+
+SELECT product_id, count(*) from sales where discount_percent > 0 group by product_id having count(*) >= 2;
+
+SELECT product_id, count(*) from sales where discount_percent > 0 group by product_id;
+
+SELECT * from sales where discount_percent > 0 group by product_id;
+
+SELECT product_id from sales where discount_percent > 0 group by product_id having count(*) >= 2;
+
+
+
+

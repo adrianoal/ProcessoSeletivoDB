@@ -1,0 +1,544 @@
+-----------------------------------------------------------------------------------------------------------------------
+DECLARE  
+-----------------------------------------------------------------------------------------------------------------------
+ --g_MAIN_ITEM_ID       VARCHAR2 (50)    := '799511587';  --VALOR MAIN_ITEM_ID
+
+  g_num NUMBER := 0;                                                  
+  G_COUNT NUMBER := 0;   --VARIAVEL_CONTADORA  
+  G_LIMIT NUMBER := 500; --VARIAVEL_LIMITADORA 
+  G_customer_id     PRD1OMS.TBAP_CUSTOMER_REF.customer_id%TYPE;       
+  G_ORGANIZATION_ID PRD1OMS.TBAP_CUSTOMER_REF.ORGANIZATION_ID%TYPE;   
+  G_derived_from    PRD1OMS.TBAP_ITEM.DERIVED_FROM%TYPE;              
+  G_item_def_id     PRD1OMS.TBAP_ITEM.ITEM_DEF_ID%TYPE;               
+
+  G_order_action_id PRD1OMS.TBAP_PRICE_PLAN.ORDER_ACTION_ID%TYPE;     
+  G_SOC             PRD1OMS.TBAP_ITEM.ITEM_DEF_ID%TYPE;               
+-----------------------------------------------------------------------------------------------------------------------
+  CURSOR LEV_CUR IS      --CURSOR_PEGA_OS_MAIN_ITEM_AGR_SUB--
+-----------------------------------------------------------------------------------------------------------------------
+  
+    SELECT MAIN_ITEM_ID_SUB AS MAIN_ITEM_ID, MAIN_ITEM_ID_AGR
+      FROM CPCSO.DEF_4543
+     WHERE (STATUS_OFFER LIKE '%MISS IN OMS%' OR
+           STATUS_OFFER_SUB LIKE '%MISS IN OMS%')
+          --AND SOC_CD_SUB_MOB = 380407484
+       AND SOC_CD_SUB_OMS IS NULL
+       --AND MAIN_ITEM_ID_SUB = '1279878071'
+       --AND ROWNUM < 501;
+                             
+  g_LEV_CUR LEV_CUR%ROWTYPE; 
+
+-----------------------------------------------------------------------------------------------------------------------
+  CURSOR SUBSCRIBER_CUR IS --CURSOR_PEGA_SUB_TEMPLATE_ABAIXO_DA_MESMA_UND._E_CUSTOMER--
+-----------------------------------------------------------------------------------------------------------------------
+  
+    SELECT TI.MAIN_ITEM_ID, TI.AP_ID
+      FROM PRD1OMS.TBAP_ITEM TI
+     WHERE TI.MAIN_ITEM_ID IN
+           (select AP_ID
+              from mtaappc.subscriber@taol1_prod
+             where ch_node_id in
+                   (select arc_child_id
+                      from mtaappc.ch_arcs@taol1_prod
+                     where arc_father_id = G_ORGANIZATION_ID) --UNDADE ORG.--
+               AND sub_status = 'A' ---ATIVOS
+               AND AP_ID IS NOT NULL
+               AND CUSTOMER_ID = G_CUSTOMER_ID) --CUSTOMEER--
+       AND TI.ITEM_DEF_ID = '502249801'
+       AND TI.END_DATE > SYSDATE
+       AND TI.STATUS = 'AC'
+       AND TI.STATE = 'AS'
+       and EXISTS (SELECT 1
+              FROM PRD1OMS.TBAP_PRICE_PLAN
+             WHERE AP_ID_DOMINANT = TI.AP_ID
+               AND END_DATE > SYSDATE
+               AND STATUS = 'AC'
+               AND STATE = 'AS');
+                                           
+  g_SUBSCRIBER_CUR SUBSCRIBER_CUR%ROWTYPE; 
+  
+-----------------------------------------------------------------------------------------------------------------------
+                                        -- FUNCAO_QUE_VALIDA_DEF_4605_AGRUPADOR_DUPLICADO --
+-----------------------------------------------------------------------------------------------------------------------
+
+                                                                      
+  FUNCTION F_CHK_CEN1(l_main_item_id VARCHAR2) RETURN BOOLEAN IS 
+    l_return NUMBER;
+
+  
+  BEGIN
+------------------------------------------------------------------------------------------------------------------------  
+------------------------------------------------------------------------------------------------------------------------ 
+      BEGIN
+         
+------------------------------------------------------------------------------------------------------------------------ 
+--CENARIO_01                      --VALIDA_DEF_4605_AGRUPADOR_DUPLICADO--
+                                  ---------------------------------------
+                               
+         SELECT COUNT(1)
+              INTO l_return --VARIAVEL--
+              FROM PRD1OMSOWN.TBAP_ITEM TI1
+             WHERE 1 = 1
+               AND TI1.STATUS IN ('AC')
+               AND TI1.STATE = 'AS'
+               AND TI1.END_DATE > SYSDATE
+               AND TI1.MAIN_ITEM_ID = l_main_item_id --1244298129,581476444
+                  --GROUP BY TI1.MAIN_ITEM_ID, TI1.ITEM_DEF_ID
+                  ----
+               AND (
+                    ----
+                    SELECT COUNT(1)
+                      FROM PRD1OMSOWN.TBAP_ITEM TI
+                     WHERE 1 = 1
+                       AND TI1.MAIN_ITEM_ID = TI.MAIN_ITEM_ID
+                       AND TI1.ITEM_DEF_ID = TI.ITEM_DEF_ID
+                       AND TI.STATUS IN ('AC')
+                       AND TI.STATE IN ('AS')
+                       AND TI.END_DATE > SYSDATE
+                          --AND TI.MAIN_ITEM_ID = '523127945'
+                          --AND TI.MAIN_ITEM_ID = l_main_item_id
+                       AND TI.CTDB_LAST_UPDATOR = 'JAVA_CONVGC'
+                     GROUP BY TI.MAIN_ITEM_ID, TI.ITEM_DEF_ID) > 0;
+          
+            IF l_return > 0 THEN
+------------------------------------------------------------------------------------------------------------------------ 
+            
+              RETURN TRUE;
+            ELSE
+              RETURN FALSE;
+            END IF;
+            -----
+ 
+      RETURN FALSE;
+    
+      -------------------------------------------
+    EXCEPTION
+      WHEN OTHERS THEN 
+        
+        --------------
+        RETURN FALSE;
+        
+ 	END;       --------------------------------------------
+  END F_CHK_CEN1; 
+    
+    
+    
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+--CENARIO_02    --CENARIO_2  --VALIDA_ORDENS_PENDENTES--
+--implementacao_adriano
+
+                                                   
+  FUNCTION F_CHK_CEN2(l_main_item_id VARCHAR2) RETURN BOOLEAN IS 
+    l_return NUMBER;
+    
+-------------------------------------------------------------------------------------------------------------------------
+   
+   BEGIN   
+                            --VALIDA_ORDENS_PENDENTES--
+ BEGIN
+ 
+ SELECT COUNT (1)
+ INTO l_return
+  FROM PRD1OMSOWN.TBORDER_ACTION TA
+   WHERE 1=1 
+    AND TA.AP_ID = l_main_item_id
+    AND TA.STATUS IN ('DE','NE'); --PENDENTE--
+
+  
+
+         IF l_return > 0 THEN
+------------------------------------------------------------------------------------------------------------------------ 
+            
+              RETURN TRUE;
+            
+              END IF;
+------------------------------------------------------------------------------------------------------------------------
+            
+ 
+      RETURN FALSE; -- APENAS_REDUNDANCIA --
+    
+      -------------------------------------------
+    EXCEPTION
+      WHEN OTHERS THEN 
+        
+      --------------
+        RETURN FALSE;
+        
+  
+ END; 
+    END F_CHK_CEN2; 
+
+--fim_implementacao_adriano
+------------------------------------------------------------------------------------------------------------------------ 
+------------------------------------------------------------------------------------------------------------------------ 
+--CENARIO_03    --VALIDA_REGISTRO_DUPLICADO_DBPACTH_INPUT--
+
+  FUNCTION F_CHK_CEN3(l_main_item_id VARCHAR2) RETURN BOOLEAN IS
+        l_return NUMBER;
+  
+    -------------------------------------------------------------------------------------------------------------------------
+    --CENARIO_3  
+  
+  BEGIN
+  
+    BEGIN
+      --DBMS_OUTPUT.PUT_LINE ('ENTREI_FUN3_ANTES_COUNT');
+    
+      SELECT COUNT(1) 
+        INTO l_return
+        FROM CPCSO.DBPATCH_INPUT DI
+       WHERE 1 = 1
+         AND DBPATCH_ID IN ('def_4543_SNB')
+         AND MAIN_ITEM_ID = l_main_item_id; 
+      ------------------------------
+              
+      IF l_return > 0 THEN
+        ------------------------------------------------------------------------------------------------------------------------ 
+      
+        RETURN TRUE;
+      
+      END IF;
+      ------------------------------------------------------------------------------------------------------------------------
+    
+      RETURN FALSE; 
+    
+      -------------------------------------------
+    EXCEPTION
+      WHEN OTHERS THEN
+       
+        --------------
+        RETURN FALSE;
+      
+    END; --------------------------------------------
+  END F_CHK_CEN3; --CLOSE_TO_FUNCTION--
+
+------------------------------------------------------------------------------------------------------------------------ 
+
+  FUNCTION F_CHK_CEN4(l_main_item_id VARCHAR2) RETURN BOOLEAN IS
+    l_return NUMBER;
+  
+  BEGIN
+    ------------------------------------------------------------------------------------------------------------------------  
+    ------------------------------------------------------------------------------------------------------------------------ 
+    BEGIN
+    
+      ------------------------------------------------------------------------------------------------------------------------ 
+                                    --VALIDA_SE_JA_EXISTE_COMPONENTE--
+                                  ---------------------------------------
+    
+      SELECT COUNT(1)
+      
+        INTO l_return
+        FROM PRD1OMSOWN.TBAP_ITEM TI
+       WHERE 1 = 1
+         AND TI.STATUS IN ('AC')
+         AND TI.STATE IN ('AS')
+         AND TI.END_DATE > SYSDATE
+         AND TI.SERVICE_TYPE = 'GOL'
+         AND TI.MAIN_ITEM_ID = l_main_item_id; 
+    
+      IF l_return > 0 THEN
+        ------------------------------------------------------------------------------------------------------------------------
+                                  --VALIDA_SE_JA_EXISTE_OFERTA--
+                               ---------------------------------------
+        SELECT COUNT(1)
+          INTO l_return
+          FROM PRD1OMSOWN.TBAP_PRICE_PLAN B
+         WHERE END_DATE > SYSDATE
+           AND B.STATE = 'AS'
+           AND B.STATUS = 'AC'
+           AND B.ITEM_DEF_ID = '380407484' --Offer Terminal
+           AND B.MAIN_ITEM_ID = l_main_item_id; --l_main_item_id;
+      
+        IF l_return > 0 THEN
+          ------------------------------------------------------------------------------------------------------------------------ 
+        
+          RETURN TRUE;
+        ELSE
+          RETURN FALSE;
+        END IF;
+        -----
+      END IF;
+      RETURN FALSE;
+    
+      -------------------------------------------
+    EXCEPTION
+    
+      WHEN OTHERS THEN
+      
+        RETURN FALSE;
+      
+    END;
+  
+  END F_CHK_CEN4; 
+
+
+------------------------------------------------------------------------------------------------------------------------ 
+------------------------------------------------------------------------------------------------------------------------ 
+------------------------------------------------------------------------------------------------------------------------ 
+                                 --PROCEDURE_GET_VALUES_PROC--
+                             --PEGAR_CUSTOMER_ID/ORGANIZATION_ID--
+                                           
+--BLOCO PROCEDURE - PODEM OU NAO RETORNAR VALORES                                              
+------------------------------------------------------------------------------------------------------------------------ 
+
+  PROCEDURE GET_VALUES_PROC(l_main_item_id PRD1OMS.TBAP_ITEM.AP_ID%TYPE,
+                            L_customer_id     OUT PRD1OMS.TBAP_CUSTOMER_REF.customer_id%TYPE,
+                            l_ORGANIZATION_ID OUT PRD1OMS.TBAP_CUSTOMER_REF.ORGANIZATION_ID%TYPE,
+                            ) AS
+  
+  BEGIN
+  
+    SELECT CUSTOMER_ID, ORGANIZATION_ID
+      INTO L_customer_id, l_ORGANIZATION_ID
+      FROM PRD1OMSOWN.TBAP_CUSTOMER_REF
+     WHERE MAIN_ITEM_ID = l_main_item_id
+       AND END_DATE > SYSDATE
+       AND STATUS = 'AC'
+       AND ENTITY_TYPE = 'amdocs.oms.apcore.ApOwnerReference';
+  
+  EXCEPTION
+    WHEN OTHERS THEN
+      g_num := 1; 
+      -- DBMS_OUTPUT.PUT_LINE ('ERRO  - '||l_main_item_id ||' - GET_VALUES_PROC '||l_ap_id);
+  
+  END GET_VALUES_PROC; 
+  
+------------------------------------------------------------------------------------------------------------------------ 
+                               --PROCEDURE_GET_TEMP_PROC--
+                          --PEGAR_ORDER_ACTION_ID/ITEM_DEF_ID_VERS_O--
+                               
+------------------------------------------------------------------------------------------------------------------------ 
+                               
+--START_OF_THE_SECOND_PROCEDURE
+  PROCEDURE GET_TEMP_PROC(l_AP_ID           PRD1OMS.TBAP_ITEM.AP_ID%TYPE,                    
+                          l_ap_version_id   PRD1OMS.TBAP_ITEM.AP_VERSION_ID%TYPE,            
+                          l_order_action_id OUT PRD1OMS.TBAP_PRICE_PLAN.ORDER_ACTION_ID%TYPE
+                          l_SOC             OUT PRD1OMS.TBAP_ITEM.ITEM_DEF_ID%TYPE) AS       
+  
+  BEGIN
+  
+    select ORDER_ACTION_ID, ITEM_DEF_ID
+      INTO l_order_action_id, l_SOC 
+      from prd1oms.tbap_price_plan
+     where ap_id_dominant = l_AP_ID 
+       and ap_version_id = l_ap_version_id
+       and state = 'AS'
+       AND STATUS = 'AC';
+  
+  EXCEPTION
+    WHEN OTHERS THEN 
+      g_num             := 0;     
+      l_order_action_id := NULL;  
+      l_SOC             := NULL; --SE_NAO_TIVER_SOC_NA_TBAP_ITEM.ITEM--
+    
+    --  DBMS_OUTPUT.PUT_LINE ('ERRO  - '||l_AP_ID || ' GET_TEMP_PROC');
+  
+  END GET_TEMP_PROC;
+-----------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------  
+--INICIO_DO_BLOCO--
+BEGIN
+  DBMS_OUTPUT.PUT_LINE('INICIO');
+
+  OPEN LEV_CUR;
+  LOOP
+    FETCH LEV_CUR
+      INTO g_LEV_CUR;
+    EXIT WHEN LEV_CUR%NOTFOUND OR G_COUNT >= G_LIMIT;
+  
+    IF  (F_CHK_CEN1(g_LEV_CUR.MAIN_ITEM_ID) OR    -- FUNCAO_QUE_VALIDA_DEF_4605_AGRUPADOR_DUPLICADO
+		 F_CHK_CEN2(g_LEV_CUR.MAIN_ITEM_ID) OR    -- VALIDA_ORDENS_PENDENTES --
+		 F_CHK_CEN3(g_LEV_CUR.MAIN_ITEM_ID) OR    -- VALIDA_REGISTRO_DUPLICADO_DBPACTH_INPUT --
+		 F_CHK_CEN4(g_LEV_CUR.MAIN_ITEM_ID)) THEN -- VALIDA_SE_JA_EXISTE_COMPONENTE E OFERTA DUPLICADA -- 
+         g_num := g_num;
+        ELSE
+     
+       
+      g_num := 0;
+    
+      GET_VALUES_PROC(G_LEV_CUR.MAIN_ITEM_ID, -- PEGAR_CUSTOMER_ID/ORGANIZATION_ID --
+                      G_customer_id,
+                      G_ORGANIZATION_ID
+                      
+                      );
+    
+      G_item_def_id := '502249801'; --COMPONENTE GESTOR ONLINE
+    
+      if g_num = 0 then
+      
+        OPEN SUBSCRIBER_CUR;
+        LOOP
+          FETCH SUBSCRIBER_CUR
+            INTO g_SUBSCRIBER_CUR;
+          EXIT WHEN SUBSCRIBER_CUR%NOTFOUND OR g_num = 1 OR G_COUNT >= G_LIMIT;
+        
+          GET_TEMP_PROC(g_SUBSCRIBER_CUR.AP_ID,   -- PEGAR_ORDER_ACTION_ID/ITEM_DEF_ID_VERS_O --
+                        '0',
+                        G_order_action_id,
+                        G_SOC);
+
+          IF G_order_action_id IS NULL THEN
+            GET_TEMP_PROC(g_SUBSCRIBER_CUR.AP_ID,
+                          '1',
+                          G_order_action_id,
+                          G_SOC);
+          END IF;
+
+          IF G_order_action_id is not null then
+            DBMS_OUTPUT.PUT_LINE('PROC_INSERT_DBPATCH (''' ||
+                                 g_LEV_CUR.MAIN_ITEM_ID || ''',''' ||
+                                 G_SOC || ''',''' || G_order_action_id ||
+                                 ''',''' || g_LEV_CUR.MAIN_ITEM_ID_AGR ||
+                                 ''');');
+           G_COUNT := G_COUNT+1;
+          
+      
+            g_num := 1;
+          
+          end if;
+        
+        END LOOP;
+        CLOSE SUBSCRIBER_CUR;
+      end if;
+    END IF;
+  END LOOP;
+  CLOSE LEV_CUR;
+  DBMS_OUTPUT.PUT_LINE('FIM');
+
+END;--FIM_DO_BLOCO--
+-----------------------------------------------------------------------------------
+/
+
+QUIT
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+																-- 	MEUS TESTES --
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+--SELECT USER FROM DUAL;
+--SELECT * FROM ALUNOS;
+--SET SERVEROUTPUT ON;
+
+--SELECT * FROM ALUNOS ORDER BY ID_ALUNO;
+--SELECT * FROM CAD_ALUNOS ORDER BY ID_ALUNO; 
+--SET SERVEROUTPUT ON;
+
+DECLARE 
+
+    G_COUNT INT := 0;
+    
+    CURSOR C_ALUNOS IS
+    
+        SELECT A.ID_ALUNO, A.NOME
+        FROM ALUNOS A WHERE A. ID_ALUNO NOT IN(5,2)
+        ORDER BY A.ID_ALUNO;
+
+    G_C_ALUNOS C_ALUNOS%ROWTYPE;
+----------------------------------------------------------------------------------------------------------------------------------------------------------    
+    FUNCTION F_CHK_CEN1(L_ID NUMBER)RETURN BOOLEAN IS
+        L_RETURN NUMBER;
+    
+    BEGIN
+        BEGIN
+            SELECT COUNT(*) INTO L_RETURN
+            FROM ALUNOS AL WHERE AL.NOME LIKE ('ADRIANO');
+            
+            IF L_RETURN > 0 THEN 
+            
+                RETURN TRUE;
+            ELSE 
+                RETURN FALSE;
+            END IF;                
+                
+            EXCEPTION   
+                WHEN OTHERS THEN 
+                
+            RETURN FALSE;
+            
+        END;
+    END F_CHK_CEN1;
+----------------------------------------------------------------------------------------------------------------------------------------------------------    
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('DATA E HORA INICIAL'||' '||TO_CHAR(SYSDATE,'DD/MM/YYYY HH24:MI:SS'));
+    DBMS_OUTPUT.NEW_LINE;
+
+
+    OPEN C_ALUNOS;
+        LOOP
+        FETCH C_ALUNOS INTO G_C_ALUNOS;
+        EXIT WHEN C_ALUNOS%NOTFOUND;
+        --DBMS_OUTPUT.PUT_LINE(G_C_ALUNOS.ID_ALUNO||' '||G_C_ALUNOS.NOME);
+        
+            IF(F_CHK_CEN1(G_C_ALUNOS.ID_ALUNO)) THEN
+            DBMS_OUTPUT.PUT_LINE('SEXO MASCULINO'||' '||G_C_ALUNOS.ID_ALUNO||' '||G_C_ALUNOS.NOME);
+        ELSE
+            DBMS_OUTPUT.PUT_LINE('ERRO!'||' '||'A FUNCAO VALIDOU UM USUARIO QUE NAO EXISTE');   
+            END IF;
+          G_COUNT := G_COUNT +1;                 
+        END LOOP;
+        
+        
+        DBMS_OUTPUT.NEW_LINE;
+        DBMS_OUTPUT.PUT_LINE('TOTAL DE REGISTROS'||' '||G_COUNT);
+        
+    CLOSE C_ALUNOS;
+    DBMS_OUTPUT.NEW_LINE;
+    DBMS_OUTPUT.PUT_LINE('DATA E HORA FIM'||' '||TO_CHAR(SYSDATE,'DD/MM/YYYY HH24:MI:SS'));
+END;
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+DECLARE 
+    CURSOR C_CAD_ALUNOS IS
+    
+        SELECT * FROM CAD_ALUNOS ORDER BY ID_ALUNO;
+
+    G_C_CAD_ALUNOS C_CAD_ALUNOS%ROWTYPE;
+BEGIN    
+    DBMS_OUTPUT.NEW_LINE;
+    DBMS_OUTPUT.PUT_LINE('SEGUNDO PL/SQL');
+
+   OPEN C_CAD_ALUNOS; 
+       LOOP
+       FETCH C_CAD_ALUNOS INTO G_C_CAD_ALUNOS;
+       EXIT WHEN C_CAD_ALUNOS%NOTFOUND;
+       
+           INSERT INTO ALUNOS (ID_ALUNO,NOME) 
+           VALUES(G_C_CAD_ALUNOS.ID_ALUNO,G_C_CAD_ALUNOS.NOME);
+        --COMMIT;
+    
+      END LOOP;
+      
+     EXCEPTION
+    WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('OCORREU UM ERRO - '||SQLCODE||' -ERROR- '||SQLERRM);
+   --ROLLBACK;
+      
+  CLOSE C_CAD_ALUNOS;
+END;
+             
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
