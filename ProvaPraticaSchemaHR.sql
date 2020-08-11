@@ -239,12 +239,16 @@ FROM DUAL;
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
 --SCHEMA HR:
+-- Resolução do problema feito com Schema HR, conforme abaixo:
 
 8. Deve ser desenvolvido uma procedure que traga as seguintes informações:
 a. Conceito:
-i. Trazer todas as LIGAÇÕES para os telefones que estão classificados como Celular (Logica da questão 4)
+i. Trazer todas as LIGAÇÕES para os telefones que estão classificados como Celular 
+(Logica da questão 4)
+
 b. Parâmetros:
 i. Data INICIO e FIM filtrando DATA da LIGAÇÃO;
+
 c. Trazer os seguintes campos:
 i. Nome Cliente;
 ii. CPF Cliente;
@@ -253,14 +257,97 @@ iv. DDD;
 v. Telefone;
 
 
+SET SERVEROUTPUT ON;
+CREATE OR REPLACE PROCEDURE PROC_CLIENTE(P_DT_INICIAL VARCHAR2,
+                                         P_DT_FINAL VARCHAR2)
+AS
+BEGIN
+    DECLARE
+      
+     CURSOR CUR_CLI IS
+     
+        SELECT P.NOME, E.FIRST_NAME, E.LAST_NAME, E.SALARY, TO_CHAR(E.HIRE_DATE,'DD/MM/YYYY')"HIRE_DATE"
+        FROM EMPLOYEES E INNER JOIN PHONE_TYPE P
+        ON (E.PHONE_ID = P.PHONE_ID)
+        WHERE P.PHONE_ID = 1
+        AND E.HIRE_DATE BETWEEN P_DT_INICIAL AND P_DT_FINAL;
+    
+     V_CUR_CLI CUR_CLI%ROWTYPE;
+     
+    BEGIN
+        
+        OPEN CUR_CLI;
+            LOOP 
+                FETCH CUR_CLI INTO V_CUR_CLI;
+                EXIT WHEN CUR_CLI%NOTFOUND;
+        
+            DBMS_OUTPUT.PUT_LINE(V_CUR_CLI.FIRST_NAME||' '||
+                                 V_CUR_CLI.LAST_NAME||' '||
+                                 V_CUR_CLI.SALARY||' '||
+                                 V_CUR_CLI.HIRE_DATE||' '||
+                                 V_CUR_CLI.NOME);    
+            END LOOP;
+        CLOSE CUR_CLI;
+    END;
+END PROC_CLIENTE;
+
+-- Execucao da PROC:
+EXEC PROC_CLIENTE('17/06/2003','15/11/2006');
+BEGIN
+    PROC_CLIENTE('17/06/2003','15/11/2006');
+END;
+
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+--SCHEMA HR:
+
+9. Uma das consultas do cliente traz a quantidade de LIGAÇÕES. Ao utilizar o filtro de DATA o 
+relatório demora muito para gerar a consulta. O especialista da Ayty sugeriu criar um índice na 
+tabela de LIGAÇÕES com o campo utilizado no filtro. Criar o script do índice.
+
+RESOLUCAO:
+	CREATE INDEX "IX_LIGACAO_DATA" ON PROVA248.CALL(DT_START); -- Índice BTREE... (SQL Server)
 
 
 
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+10. Deve ser desenvolvida uma procedure que traga as seguintes informações:
+
+a. Conceito:
+i. Trazer todos os CLIENTES, mesmo os que não possuem VENDAS.
+
+ii. O Filtro de CPF não é obrigatório, se não for passado nada no parâmetro não deve ser 
+    pesquisado por CPF vazio.
+	
+b. Parâmetros:
+i. Filtro de CPF.
+
+c. Trazer os seguintes campos:
+i. Nome Cliente.
+ii. CPF Cliente (formato: 000.XXX.XXX-00, mostrar somente os 4 primeiros dígitos e os 2 últimos).
+iii. Produto.
+iv. Houve venda? (Deve trazer preenchida como SIM quando o cliente tiver venda e NÃO quando não 
+	tiver).
+
+v. Valor Produto (formato: R$ 00,00).
+vi. Status da venda.
+vii. Data da venda (formato: DD/MM/AA).
+viii. Hora última Ligação (formato: HH:MM:SS).
+
+d. Regras:
+i. Quando um CLIENTE não tiver STATUS deve aparecer “Erro de tabulação”. 
+   Deve ser utilizado tabela temporária para ajuste dos status.
+   
+ii. É permitido passar uma lista de CPFs como filtro. 
+    Utilizar vírgula (",") como separador. Ex: 12345678960,12345670;"
 
 
+Resolucao Parcial:
+------------------	
 
-
-
+EXEC PROC_STATUS_FUNC
+EXEC PROC_STATUS_FUNC('515.123.4567');
 
 
 
