@@ -97,7 +97,7 @@
 
 
 
- Obs: Norelacionamento de 1:1 a regra diz que deve ser feito a união das tabelas, conforme abaixo:
+ Obs: No relacionamento de 1:1 a regra diz que deve ser feito a união das tabelas, conforme abaixo:
  ------------
  -- Pessoa --
  ------------

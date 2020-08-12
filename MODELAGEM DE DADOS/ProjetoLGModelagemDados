@@ -1,38 +1,48 @@
-LOCADORA
+LOCACAO
 
-CADASTRO FUNCIONARIO
+
+
+
+CAD_FUNCIONARIO
 				nome 
 				cpf
 				dt_nascimento
-				end
-				telefone
+				endereco
 				email
-				login
-				senha
+				--login
+				--senha
 				
+TELEFONE
+	numero 
+
+
+
+TIPO_TELEFONE
+	tipo_telefone --> cel/comer/residencial...
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
 
 PRODUTO
 		titulo
-		genero
-		ator
-		tipo (dvd ou bd)
-ASTRO
-	nome
+		autor
+		qtde
+
+
+GENERO
+		descricao --comédia, suspense, terror, etc
+		
+FORMATO
+	TIPO 	  dvd / bd  
+	DESCRICAO Digital Versatile Disc / Blu-ray Disc
+		  		
+
+ASTROS
+	  nome
 	
 		
-
+--------------------------------------------------------------------------------------------------
 CATALOGO
 
-
-ESTOQUE
-		titulo
-		genero
-		ator
-		astro
-		tipo (dvd ou bd)
-		data_cadastro
-		preco_venda
-		quantidade
 		
 		
 TIPO ENTREGA
@@ -62,7 +72,7 @@ STATUS CREDITO
 		data_credito
 		last_update_date
 	
-HISTORICO LOCACAO
+-- HISTORICO LOCACAO
 			
 
 
