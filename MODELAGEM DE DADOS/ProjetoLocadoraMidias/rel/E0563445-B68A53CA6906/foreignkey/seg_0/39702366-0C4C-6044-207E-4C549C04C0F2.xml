@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="39702366-0C4C-6044-207E-4C549C04C0F2" containerWithKeyObject="2A83265E-BC30-4D63-9637-741787D9B4AE" localFKIndex="FF9EF1EA-4777-F604-5732-F452C279E48D" name="CAD_PRODUTO_GENERO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:02:25 UTC</createdTime>
+<generatorID>48247FA6-B4CE-A12F-3CC1-EBD8C78C75E7</generatorID>
+<ownerDesignName>ProjetoLocadoraMidias</ownerDesignName>
+<referredTableLongName>GENERO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>63C7DF3D-BCE3-4AA0-CD55-8582676E98A7</referredTableID>
+<keyObject>74345EF8-96FD-5D0E-4715-2FDE746D4A78</keyObject>
+<referredKeyID>74345EF8-96FD-5D0E-4715-2FDE746D4A78</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_genero</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
