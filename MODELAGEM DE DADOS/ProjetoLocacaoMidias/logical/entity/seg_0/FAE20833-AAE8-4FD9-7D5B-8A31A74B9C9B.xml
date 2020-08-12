@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="FAE20833-AAE8-4FD9-7D5B-8A31A74B9C9B" name="FORMATOS">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:18:45 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>FORM</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_formato" id="FB522392-E22E-037B-BB47-5418B8CFCBC7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:19:01 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descricao" id="273FF157-6A94-B77E-8520-E0848E56E6ED">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:19:16 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A68D4C4B-0A1A-9512-C75D-2DE8EBA05F8A" name="FORMATO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:19:14 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FB522392-E22E-037B-BB47-5418B8CFCBC7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,51 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E41EE9CA-2E8B-01D9-5388-D465CD6F1557" name="TELEFONE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>9506A0F4-09ED-C84F-959E-6C98DEFF2679</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<abbreviation>FONE</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_telefone" id="DDD09096-570C-149F-B6FA-F555FE89D6C8">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>5E35AEAF-1A97-371B-4955-33FC852CC33E</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descriacao" id="5BD2C35C-FDD5-A670-87E3-77393C82C035">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>8ED3BA87-7087-2C95-AE1D-A5AB84333A19</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C556864A-2A6A-81B6-19D8-91A46095E269" name="TELEFONE_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>A7CFA155-2A7F-CF4C-3435-CF5876DD8829</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DDD09096-570C-149F-B6FA-F555FE89D6C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

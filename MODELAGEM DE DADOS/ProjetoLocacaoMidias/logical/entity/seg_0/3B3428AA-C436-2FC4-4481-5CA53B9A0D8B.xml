@@ -1,0 +1,102 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3B3428AA-C436-2FC4-4481-5CA53B9A0D8B" name="CAD_FUNCIONARIOS">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:13:16 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>CADF</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_cad_funcionario" id="DF5EF96E-FFC4-1BB6-8BE5-487253DB8348">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:13:29 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cpf" id="C0F74E4E-443E-6ED7-B7BC-47CDDC644AF4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:13:55 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="E31D98BD-D1FC-01A3-E5FB-8EE32E23BC4A">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:14:17 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="0A19BE21-928E-2643-D3AA-CF363C9600E2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:14:32 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_telefone" id="7E8A24DC-EDDC-D565-34CB-E1527168279C">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:05 UTC</createdTime>
+<generatorID>3F7090E3-5F27-21C5-A3FF-450006B808C4</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<referedAttribute>5E35AEAF-1A97-371B-4955-33FC852CC33E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6C6A3C3C-5604-CFFD-B802-F920DC408A53" name="CAD_FUNCIONARIO PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 13:13:52 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<engineerTo>
+<item key="CB3C8B1C-EDC4-2E6A-7ACC-C7CEF2A55632" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>DF5EF96E-FFC4-1BB6-8BE5-487253DB8348</attributeRef>
+<attributeRef>7E8A24DC-EDDC-D565-34CB-E1527168279C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

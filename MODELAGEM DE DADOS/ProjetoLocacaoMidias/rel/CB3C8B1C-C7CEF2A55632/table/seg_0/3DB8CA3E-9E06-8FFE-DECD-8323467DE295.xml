@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3DB8CA3E-9E06-8FFE-DECD-8323467DE295" name="CAD_FUNCIONARIO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>3B3428AA-C436-2FC4-4481-5CA53B9A0D8B</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<abbreviation>CADF</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_cad_funcionario" id="D2945C0A-8656-DE99-2A55-6649AFEB9CB5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>DF5EF96E-FFC4-1BB6-8BE5-487253DB8348</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf" id="DA478CD2-FA97-DE4E-4D6E-570951DFCEA4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>C0F74E4E-443E-6ED7-B7BC-47CDDC644AF4</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="068B0362-B746-D99C-DEF1-7A4487601D91">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>E31D98BD-D1FC-01A3-E5FB-8EE32E23BC4A</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="00563286-9EAB-757B-C21E-E52CF8DFC799">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>0A19BE21-928E-2643-D3AA-CF363C9600E2</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONE_id_telefone" id="4446804E-31B5-030D-7407-4402E732E3F0">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>7E8A24DC-EDDC-D565-34CB-E1527168279C</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D357063C-24DC-59AE-09FA-2CE82233EE81" referredColumn="DDD09096-570C-149F-B6FA-F555FE89D6C8"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="48D7C074-2299-B211-B4F0-B44BC10AB4E1" name="CAD_FUNCIONARIO_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>6C6A3C3C-5604-CFFD-B802-F920DC408A53</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D2945C0A-8656-DE99-2A55-6649AFEB9CB5"/>
+<colUsage columnID="4446804E-31B5-030D-7407-4402E732E3F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="532245DD-E7D0-162B-216F-524819CA01CB" name="CAD_FUNCIONARIO_TELEFONE_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-12 14:00:26 UTC</createdTime>
+<generatorID>3F7090E3-5F27-21C5-A3FF-450006B808C4</generatorID>
+<ownerDesignName>ProjetoLocacaoMidias</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4446804E-31B5-030D-7407-4402E732E3F0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
