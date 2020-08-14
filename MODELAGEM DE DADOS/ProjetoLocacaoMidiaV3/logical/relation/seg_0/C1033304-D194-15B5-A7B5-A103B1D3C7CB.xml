@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="funcionario_telefone" directorySegmentName="seg_0" id="C1033304-D194-15B5-A7B5-A103B1D3C7CB">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 20:49:37 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>94154C93-DF6B-D06B-929A-5458794121F8</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>643BE23F-DCE2-C9F9-93F6-414F20704048</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

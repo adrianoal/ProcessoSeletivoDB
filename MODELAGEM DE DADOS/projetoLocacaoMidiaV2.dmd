@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="projetoLocacaoMidiaV2" id="31C92C5A-FA5D-50E9-4F1C-5435A553C0AE" version="3.5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:34:09 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>31C92C5A-FA5D-50E9-4F1C-5435A553C0AE</designId>
+</OSDM_Design>

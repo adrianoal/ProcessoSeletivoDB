@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F51F2C83-2E76-AE9B-FB49-32A6C8FA335C" name="LOCACAO_ENTREGA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>C1F10A92-38D2-BA6E-098D-EAC637194B7F</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<abbreviation>LOCE</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ENTREGA_ENT_ID" id="FEB906F3-585F-93BC-D5FA-2BABBF063EDC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FA0EF80F-BADA-B1A3-94F6-1738070C23FB" referredColumn="3CD0FB26-8D46-C247-E647-E671BF5B6C05"/>
+</associations>
+</Column>
+<Column name="LOCACAO_LOC_ID" id="FB9D763D-7E2E-C1BE-B7BF-B9CB262FF0DA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="963A2453-9151-FD32-8910-3727F0C7D916" referredColumn="74631C59-081A-649C-AB8E-F5ADDFB608FA"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="81ACEE67-6215-DE9F-9C54-97A1A76D6600" name="LOCACAO_ENTREGA_ENTREGA_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>4B93ACD5-3A03-8F92-5C28-43956A00B613</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FEB906F3-585F-93BC-D5FA-2BABBF063EDC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E740021D-641A-D2D1-8CDC-291D62FF76D8" name="LOCACAO_ENTREGA_LOCACAO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>1D0E1511-7BB9-7EC8-7859-783CB85E9E65</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB9D763D-7E2E-C1BE-B7BF-B9CB262FF0DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

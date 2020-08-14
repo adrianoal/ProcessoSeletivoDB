@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DBB7598A-FB73-EA8A-6355-3B534B38CE5B" name="PRODUTO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<generatorID>6B393506-306B-2598-70C1-AF608E56EF96</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<abbreviation>PROD</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="titulo" id="88B54B25-2261-9CC1-43E0-7DDF2CD4A157">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<generatorID>5BD7B47E-D600-E564-C695-A51E5BF055B7</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="autor" id="20B718ED-90C9-AD1B-5821-DB09667BD2B5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<generatorID>2E1A2D76-800D-9F00-29C5-27FCB499D8FF</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtde" id="51123ED8-CDD3-D3EB-8B24-8F7F4DC7CCF8">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<generatorID>5C11BF02-70C9-C4C7-0884-12C8D7505B25</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROD_ID" id="4144CC90-213C-07A9-EA97-D815BA83738F">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9302B016-933F-1CDA-AF9C-26C91497779B" name="PROD_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="4144CC90-213C-07A9-EA97-D815BA83738F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

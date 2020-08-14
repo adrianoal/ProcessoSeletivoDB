@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="entrega_locacao" directorySegmentName="seg_0" id="03FC525F-F438-D9C9-3CEE-9CB9B3778619">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:35:35 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>B21C7617-8CB2-2CE3-30B1-41B5355375FE</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>8E420B1C-076B-E4F9-6F15-EE2CA72CEF95</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

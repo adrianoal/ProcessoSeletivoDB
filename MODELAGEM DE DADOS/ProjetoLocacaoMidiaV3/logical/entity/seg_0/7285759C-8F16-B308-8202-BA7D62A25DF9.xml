@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7285759C-8F16-B308-8202-BA7D62A25DF9" name="CLIENTE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:12:11 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>CLI</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="nome" id="3E6309BA-3F5E-0ADE-4968-55DB3D4F58FC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:12:27 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sobrenome" id="E928A661-FB7E-3A09-DFB3-C2C2A0B4C863">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:12:47 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nasc" id="FDAC4A57-2711-780B-E835-086077669EF0">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:13:06 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="CABD460E-D441-ECD4-0A9D-A7A7BD104FE4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:13:25 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

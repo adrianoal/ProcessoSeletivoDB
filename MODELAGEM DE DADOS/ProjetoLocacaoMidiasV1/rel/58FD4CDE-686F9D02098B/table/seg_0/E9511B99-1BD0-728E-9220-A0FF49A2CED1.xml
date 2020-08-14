@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E9511B99-1BD0-728E-9220-A0FF49A2CED1" name="ASTRO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<generatorID>BB578F40-DBAB-93C6-46C9-F98C1E2EE129</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<abbreviation>AST</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nome" id="6D9680BA-B2C7-0394-0FAE-9D6491FC8FFC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<generatorID>EE2F3A31-3746-F191-A67B-7EAA7C2D5188</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AST_ID" id="6EE2A069-340F-0D5A-6594-381E3F04B119">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="66050C8A-ABE4-AF04-F7CA-A81B237844FB" name="AST_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 11:44:44 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiasV1</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="6EE2A069-340F-0D5A-6594-381E3F04B119"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

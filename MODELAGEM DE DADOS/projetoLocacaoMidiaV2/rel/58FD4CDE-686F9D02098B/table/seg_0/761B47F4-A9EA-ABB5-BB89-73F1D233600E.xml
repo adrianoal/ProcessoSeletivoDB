@@ -1,0 +1,86 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="761B47F4-A9EA-ABB5-BB89-73F1D233600E" name="FUNCIONARIO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>94154C93-DF6B-D06B-929A-5458794121F8</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<abbreviation>FUNC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nome" id="9AF6EB88-6E69-D5CA-753D-D2097056E9DA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>2DCD8209-26EF-C293-D34E-04960413C0EE</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf" id="AE295373-BD6F-3A10-63E5-530409161C67">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>B67D812F-8FED-7B25-ED94-8E46488EFB68</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="0CA5477F-21F8-9F53-D749-0AF240474B37">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>CE7A2719-A4BA-9139-D5C0-5A8515055E21</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="D747C377-7502-FFF5-D99D-0B548041B81F">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>BC0654DD-0C3C-9482-EE2D-60DF5EAE292C</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FUNC_ID" id="F5A9A559-77B8-D4E2-628C-4557BB02D1ED">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2FCA4B98-2547-8DA8-CA47-FCA76D6E4E68" name="FUNC_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="F5A9A559-77B8-D4E2-628C-4557BB02D1ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

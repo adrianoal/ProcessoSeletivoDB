@@ -1,9 +1,5 @@
-LOCACAO
-
-
-
-
-CAD_FUNCIONARIO
+--------------------------------------------------------------------------------------------------
+FUNCIONARIO
 				nome 
 				cpf
 				dt_nascimento
@@ -17,15 +13,26 @@ TELEFONE
 
 
 
-TIPO_TELEFONE
+TIPO
 	tipo_telefone --> cel/comer/residencial...
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
+LOCACAO
+	dt_locacao
+	dt_devolucao
+	dt_pagto
 
-PRODUTO
+--------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------
+ESTOQUE
 		titulo
 		autor
+		dt_cadastro
+		preco
 		qtde
+		ultima_atualizacao -- id_usuario
+		acao --  Inserindo ou Atualizando 
+		-- catalogo V ou F
 
 
 GENERO
@@ -37,24 +44,20 @@ FORMATO
 		  		
 
 ASTROS
-	  nome
+	  nome -- Meryl Streep / Morgan Freeman
 	
 		
 --------------------------------------------------------------------------------------------------
-CATALOGO
-
-		
-		
-TIPO ENTREGA
-			lancamento 24h
-			especial 48h
+	
+ENTREGA
+	tipo -- lancamento 24h / especial 48h
 
 CLIENTE
 		nome 
 		cpf
 		dt_nascimento
-		telefone 
-		email
+		----- telefone 
+		-- email
 		
 		
 		

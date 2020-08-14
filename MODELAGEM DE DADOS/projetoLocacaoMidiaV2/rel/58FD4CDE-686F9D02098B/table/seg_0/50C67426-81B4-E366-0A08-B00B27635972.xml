@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="50C67426-81B4-E366-0A08-B00B27635972" name="TIPO_FONE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>7594924C-70CB-E95E-4D47-549FDEDAC654</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipo" id="7032544D-8813-DE19-DEC1-6DE2EEF0D6D7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<generatorID>48CAC2DB-306C-CE70-75AD-28DD391988C0</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_FONE_ID" id="4AF3A1C6-C996-D398-9BB1-8C0E6D40D5AE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0D0FE26-8DF9-85FB-11B3-032C9418D61B" name="TIPO_FONE_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:32:31 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="4AF3A1C6-C996-D398-9BB1-8C0E6D40D5AE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

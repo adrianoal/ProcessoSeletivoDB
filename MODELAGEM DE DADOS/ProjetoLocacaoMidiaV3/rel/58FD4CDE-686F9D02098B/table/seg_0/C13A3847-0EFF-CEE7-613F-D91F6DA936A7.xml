@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C13A3847-0EFF-CEE7-613F-D91F6DA936A7" name="LOCACAO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:59:14 UTC</createdTime>
+<generatorID>8E420B1C-076B-E4F9-6F15-EE2CA72CEF95</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<abbreviation>LOC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOC_ID" id="74631C59-081A-649C-AB8E-F5ADDFB608FA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 22:02:05 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="dt_locacao" id="A3A653B1-AB9F-F213-AAD0-B9EF1D554E7D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:59:14 UTC</createdTime>
+<generatorID>B847E3EE-D1CC-A1EF-F2C7-5DC07173E2D3</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_devolucao" id="C18CADAD-0A14-6544-A52B-3D9CBEDF4D29">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:59:14 UTC</createdTime>
+<generatorID>7079EE00-CAF8-A8B8-92D6-A21300F2A6DC</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_pagto" id="EF1C2FDE-83A7-3F1C-C2EC-33F137D02539">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:59:14 UTC</createdTime>
+<generatorID>04ECDE0C-19C9-B859-E3D1-B83698010F82</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FUNCIONARIOv2_FUNC_ID2" id="FE5C84FF-1BF7-A69B-3856-02B47B9FB825">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 22:02:05 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6EA13B67-181A-817F-EB8A-455F02D8041E" referredColumn="161C3FD6-627A-9694-6211-0A448C9CC6C2"/>
+</associations>
+</Column>
+<Column name="dt_venc" id="F7978CAF-FE0E-8768-2512-5E0FAA2BA16A">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<generatorID>690115A0-6EC1-EADC-6F30-15BB01D11FAD</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CLIENTE_CLI_ID" id="E74851E7-FCCE-6492-4A7F-05D8D9C2B713">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D443740F-BD8B-F123-8F05-4A4433810477" referredColumn="389CCA9B-49B9-BEA0-BB19-AE8506AE4353"/>
+</associations>
+</Column>
+<Column name="ENTREGA_ENT_ID" id="1AE533B2-6AFF-5E53-1226-9CD76E63DAEA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EE979E4A-01D3-70B8-FE75-A43D64663820" referredColumn="3CD0FB26-8D46-C247-E647-E671BF5B6C05"/>
+</associations>
+</Column>
+<Column name="FUNCIONARIO_FUNC_ID" id="F94B2843-5D56-02C4-31CF-8C0C8FB507F4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="81A84336-608E-E32A-72C0-572EA88B8E93" referredColumn="F5A9A559-77B8-D4E2-628C-4557BB02D1ED"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="392DFDE1-434D-D9DE-4D3D-47238728DC92" name="LOC_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 22:02:05 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="74631C59-081A-649C-AB8E-F5ADDFB608FA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0D974FFC-2A14-7681-6167-397CF65D8022" name="LOCACAO_FUNCIONARIOv1_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 22:02:05 UTC</createdTime>
+<generatorID>34F40F49-18AC-E153-498B-511C98413539</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FE5C84FF-1BF7-A69B-3856-02B47B9FB825"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CEFAA1D9-E728-EC47-B1E3-F600F835BD4B" name="LOCACAO_CLIENTE_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<generatorID>AC18F47C-B2F5-4085-97D7-D66A43DC3B86</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E74851E7-FCCE-6492-4A7F-05D8D9C2B713"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E1F78C3E-1405-CF58-1AE1-080C04F7DA5A" name="LOCACAO_ENTREGA_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<generatorID>03FC525F-F438-D9C9-3CEE-9CB9B3778619</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1AE533B2-6AFF-5E53-1226-9CD76E63DAEA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA08BBB0-92E0-464E-4178-F157E27548A1" name="LOCACAO_FUNCIONARIO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<generatorID>34F40F49-18AC-E153-498B-511C98413539</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F94B2843-5D56-02C4-31CF-8C0C8FB507F4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

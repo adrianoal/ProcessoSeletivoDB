@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="tipo_fone_telefone" directorySegmentName="seg_0" id="E51A8BE4-36B6-AA49-3927-75CDD1C4CE19">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:23:45 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7594924C-70CB-E95E-4D47-549FDEDAC654</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>643BE23F-DCE2-C9F9-93F6-414F20704048</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

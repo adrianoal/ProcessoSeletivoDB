@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="81A84336-608E-E32A-72C0-572EA88B8E93" containerWithKeyObject="C13A3847-0EFF-CEE7-613F-D91F6DA936A7" localFKIndex="AA08BBB0-92E0-464E-4178-F157E27548A1" name="LOCACAO_FUNCIONARIO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 12:20:28 UTC</createdTime>
+<generatorID>34F40F49-18AC-E153-498B-511C98413539</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<referredTableLongName>FUNCIONARIO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>761B47F4-A9EA-ABB5-BB89-73F1D233600E</referredTableID>
+<keyObject>2FCA4B98-2547-8DA8-CA47-FCA76D6E4E68</keyObject>
+<referredKeyID>2FCA4B98-2547-8DA8-CA47-FCA76D6E4E68</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FUNC_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

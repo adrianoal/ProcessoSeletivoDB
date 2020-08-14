@@ -1,0 +1,160 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7CD8C087-18A5-7DF1-3842-C494C717A611" name="PRODUTO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:41:51 UTC</createdTime>
+<generatorID>451F69D8-C313-6725-4F8F-999B00200E26</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<abbreviation>PROD</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="titulo" id="FAE3744E-6263-67F1-31FF-812C6BB9EBAC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:41:51 UTC</createdTime>
+<generatorID>CF04E421-DEB8-9FB2-BF87-F7FC229CDC38</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="autor" id="727EB765-9960-9658-AB2D-6A57535C38F4">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:41:51 UTC</createdTime>
+<generatorID>6B490087-75E7-BF4F-C9E2-97D18AD2369F</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="qtde" id="005246DA-FAEF-6B8F-23D6-04934C904618">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:41:51 UTC</createdTime>
+<generatorID>5012431C-C6F3-C11E-FBCB-2F763E853473</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROD_ID" id="697CE164-28DF-9AFE-DB23-4FA49378C920">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:41:51 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="GENERO_GEN_ID" id="DE4D1235-2FAA-BD37-E59B-B78D1508CACE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:47:16 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A7AFC705-17A3-8F27-AE92-8559F8996D7A" referredColumn="0BF3B64D-F1F0-B350-E10F-2372E7359BD2"/>
+</associations>
+</Column>
+<Column name="FORMATO_FORM_ID" id="046E8D91-3BFB-9E8B-02BD-85AD1CE130FE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E103949-D428-CE4B-5D75-AA5C27658C27" referredColumn="9B59AAD6-DAE7-FA11-C66F-5BA61CF8FB1D"/>
+</associations>
+</Column>
+<Column name="LOCACAO_LOC_ID" id="8A321326-136D-DD63-C836-0F3D78EA7B3B">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 22:02:05 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1FAC9A94-7353-DBDD-5FBE-7C7DDA81DCA7" referredColumn="74631C59-081A-649C-AB8E-F5ADDFB608FA"/>
+</associations>
+</Column>
+<Column name="catalogo" id="AAECB064-3352-8846-1005-755861D4BF76">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>91DCB4AF-9953-B1B9-E09A-179B65937B04</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C6C9B906-6C6B-7D8C-AD65-F265215CC559" name="PROD_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:41:51 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="697CE164-28DF-9AFE-DB23-4FA49378C920"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FB47C339-2BA8-4683-5AFA-EE20B2FAF9D2" name="PRODUTO_GENERO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:47:16 UTC</createdTime>
+<generatorID>28817560-63B9-0D41-5107-C348CDDDD9BD</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE4D1235-2FAA-BD37-E59B-B78D1508CACE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AA20CA26-C473-D4CB-0CBD-A9BC4E58AAE7" name="PRODUTO_FORMATO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<generatorID>27F42CE4-8E27-6F45-B4DE-52578C1293A2</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="046E8D91-3BFB-9E8B-02BD-85AD1CE130FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E729C18-C0FF-4BB8-5EFC-6BE0309A5727" name="PRODUTO_LOCACAO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 22:02:05 UTC</createdTime>
+<generatorID>370329B4-9263-7C00-313C-01D17AC8733A</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8A321326-136D-DD63-C836-0F3D78EA7B3B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

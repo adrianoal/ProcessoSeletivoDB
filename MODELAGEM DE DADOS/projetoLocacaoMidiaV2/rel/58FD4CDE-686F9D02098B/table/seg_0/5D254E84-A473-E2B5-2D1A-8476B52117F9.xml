@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5D254E84-A473-E2B5-2D1A-8476B52117F9" name="FORMATO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<generatorID>2F514AAE-2485-BC27-4B50-28944FA5E2FD</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<abbreviation>FORM</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipo" id="4929B02F-6DA9-1382-17FE-5F4E1A3D28FF">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<generatorID>C82EFA46-A1DE-6D88-86A9-69457C5B2591</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descricao" id="E8058396-DF0A-7E78-AB72-A61B3A245F24">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<generatorID>24339B23-98F3-56AC-7295-C8A7A77B5582</generatorID>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FORM_ID" id="9B59AAD6-DAE7-FA11-C66F-5BA61CF8FB1D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1790B339-6EC6-A47A-B372-3017BD4065F1" name="FORM_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-13 21:51:06 UTC</createdTime>
+<ownerDesignName>projetoLocacaoMidiaV2</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="9B59AAD6-DAE7-FA11-C66F-5BA61CF8FB1D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

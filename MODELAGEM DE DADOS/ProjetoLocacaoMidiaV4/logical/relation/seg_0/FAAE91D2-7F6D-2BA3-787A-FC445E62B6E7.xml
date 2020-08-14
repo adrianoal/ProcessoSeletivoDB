@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="astro_produto" directorySegmentName="seg_0" id="FAAE91D2-7F6D-2BA3-787A-FC445E62B6E7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 16:32:30 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>3F1EAC3D-AA16-77EC-7346-40EFD685A473</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>451F69D8-C313-6725-4F8F-999B00200E26</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

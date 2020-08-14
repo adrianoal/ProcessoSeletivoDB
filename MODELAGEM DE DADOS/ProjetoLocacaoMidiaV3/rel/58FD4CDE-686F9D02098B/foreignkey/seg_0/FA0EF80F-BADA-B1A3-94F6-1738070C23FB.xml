@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="FA0EF80F-BADA-B1A3-94F6-1738070C23FB" containerWithKeyObject="F51F2C83-2E76-AE9B-FB49-32A6C8FA335C" localFKIndex="81ACEE67-6215-DE9F-9C54-97A1A76D6600" name="LOCACAO_ENTREGA_ENTREGA_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>4B93ACD5-3A03-8F92-5C28-43956A00B613</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<referredTableLongName>ENTREGA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>67998294-EBC0-EDD1-EA53-48DCF1C9FF86</referredTableID>
+<keyObject>3D86A548-496D-5B40-6088-D5D9EDAD66B7</keyObject>
+<referredKeyID>3D86A548-496D-5B40-6088-D5D9EDAD66B7</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ENT_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

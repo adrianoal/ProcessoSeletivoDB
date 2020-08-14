@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="67998294-EBC0-EDD1-EA53-48DCF1C9FF86" name="ENTREGA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>B21C7617-8CB2-2CE3-30B1-41B5355375FE</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<abbreviation>ENT</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="tipo" id="45DD5171-E767-EDBB-1D54-AFCB37B69551">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<generatorID>2292000F-AF67-434D-0D1E-1763B3CE395D</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ENT_ID" id="3CD0FB26-8D46-C247-E647-E671BF5B6C05">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3D86A548-496D-5B40-6088-D5D9EDAD66B7" name="ENT_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-14 11:21:42 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="3CD0FB26-8D46-C247-E647-E671BF5B6C05"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
