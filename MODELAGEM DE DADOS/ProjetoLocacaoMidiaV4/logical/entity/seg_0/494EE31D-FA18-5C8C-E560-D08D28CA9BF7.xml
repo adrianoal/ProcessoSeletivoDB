@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8E420B1C-076B-E4F9-6F15-EE2CA72CEF95" name="LOCACAO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="494EE31D-FA18-5C8C-E560-D08D28CA9BF7" name="VIDEO_CLUBE">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-13 21:53:36 UTC</createdTime>
+<createdTime>2020-08-17 20:10:15 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -14,11 +14,37 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<shortName>LOC</shortName>
+<shortName>VIDC</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="dt_locacao" id="B847E3EE-D1CC-A1EF-F2C7-5DC07173E2D3">
+<Attribute name="nome" id="38449F12-26CB-F98B-E35D-FA06B12DB184">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-13 21:54:05 UTC</createdTime>
+<createdTime>2020-08-17 20:10:32 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sobrenome" id="21FA3804-F01C-C166-FFDC-FD7EC3FA4488">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-17 20:10:52 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_cadastro" id="DA0AF50E-391D-9A72-70F5-B9C26D27CF19">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-17 20:11:07 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -28,22 +54,9 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dt_venc" id="690115A0-6EC1-EADC-6F30-15BB01D11FAD">
+<Attribute name="id_usuario" id="C79EFD25-DD02-A1AE-BA47-A49C76F17F45">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-14 11:29:52 UTC</createdTime>
-<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
-<engineerTo>
-<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cod_produto" id="CBB77CA2-45CC-02C8-B59A-C22A2BA797E0">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-08-14 18:03:11 UTC</createdTime>
+<createdTime>2020-08-17 20:18:59 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -54,22 +67,9 @@
 <dataTypePrecision>18</dataTypePrecision>
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="quantidade" id="FD316EC0-E6EC-849E-92F7-325EB422A470">
+<Attribute name="credito" id="8994A117-0EC7-74D2-04A4-6915D70D07B9">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-14 18:04:24 UTC</createdTime>
-<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
-<engineerTo>
-<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>18</dataTypePrecision>
-<ownDataTypeParameters>,18,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="preco" id="FD00FE50-11A4-0A82-F968-68E6B5A6FB98">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-08-20 13:33:34 UTC</createdTime>
+<createdTime>2020-08-18 21:22:24 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -80,6 +80,31 @@
 <dataTypePrecision>10</dataTypePrecision>
 <dataTypeScale>2</dataTypeScale>
 <ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_credito" id="1B544065-73B6-4F3F-54BF-FCB0D0686C05">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-18 21:23:54 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cliente_cli_id" id="7B11382D-CD8B-0FA0-4C53-00A59F5A88AD">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 13:56:40 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

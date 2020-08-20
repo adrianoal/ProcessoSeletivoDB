@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D4C3D17D-C367-D68E-DDDA-C7AB94F1C807" name="VIDEO_CLUBE">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>494EE31D-FA18-5C8C-E560-D08D28CA9BF7</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<abbreviation>VIDC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nome" id="B902057E-9424-F89F-E5CF-F6E89FD4C908">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>38449F12-26CB-F98B-E35D-FA06B12DB184</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sobrenome" id="E447433B-DC76-3EA9-AFE5-DD5ED6F43D07">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>21FA3804-F01C-C166-FFDC-FD7EC3FA4488</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="data_cadastro" id="60975158-0880-8E97-12E2-513439D08905">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>DA0AF50E-391D-9A72-70F5-B9C26D27CF19</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario" id="BEF463BE-DB0C-07D1-7A78-905D2E3DE30D">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>C79EFD25-DD02-A1AE-BA47-A49C76F17F45</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="credito" id="F2A57A43-EC11-F101-C905-A187DD1EC886">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>8994A117-0EC7-74D2-04A4-6915D70D07B9</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_credito" id="9FAC02AA-AB93-9BF6-DC60-0CA358C7AB37">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>1B544065-73B6-4F3F-54BF-FCB0D0686C05</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cliente_cli_id" id="86984051-B252-7129-E6E8-7A694440CE6F">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>7B11382D-CD8B-0FA0-4C53-00A59F5A88AD</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VIDC_ID" id="58947CBE-5774-3F61-30C5-3E6358EF1B08">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E3CD6C26-78AB-5CF7-33C1-E97874302ECD" name="VIDC_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="58947CBE-5774-3F61-30C5-3E6358EF1B08"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -3,24 +3,34 @@ FUNCIONARIO
 				nome 
 				cpf
 				dt_nascimento
-				endereco
 				email
 				--login
 				--senha
 				
-TELEFONE
-	numero 
+LOGRADOURO	
+	endereco -- rua/ av. est...
+	cidade
+	bairro
+	numero
+	complemento
+	cep
+	
+				
+FONE
+	numero
 
+	
+TIPO_FONE	
+	tipo --> cel/comer/residencial...	
 
-
-TIPO
-	tipo_telefone --> cel/comer/residencial...
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
 LOCACAO
 	dt_locacao
 	dt_devolucao
 	dt_pagto
+	cod_produto
+	quantidade
 
 --------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------
@@ -45,6 +55,8 @@ FORMATO
 
 ASTROS
 	  nome -- Meryl Streep / Morgan Freeman
+	  nome_autor
+	  dt_nascimento
 	
 		
 --------------------------------------------------------------------------------------------------
@@ -56,8 +68,7 @@ CLIENTE
 		nome 
 		cpf
 		dt_nascimento
-		----- telefone 
-		-- email
+		 email
 		
 		
 		
@@ -65,15 +76,18 @@ VIDEO CLUBE
 		fisrt_name
 		last_name
 		data_cadastro
-		telefone
-		rua
-		numero
-		last_update_date
+		--telefone
+		--rua
+		--numero
+		data_cadastro
 
-STATUS CREDITO
-		valor
-		data_credito
-		last_update_date
+CREDITO
+	saldo
+	data_credito
+	last_update_date
+	id_usuario
+	sistema
+		
 	
 -- HISTORICO LOCACAO
 			

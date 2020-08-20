@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0FC1DA71-A12A-AF83-14AB-BA3BD88F0281" name="FUNC">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>5781240A-D8DC-77A3-F96D-4E02F3C4C4DB</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<abbreviation>FUNC</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="nome" id="57543E41-6FB1-EED2-0F2A-B8308A7FB0D7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>2747758D-2309-34EA-344D-46454DFDBC2B</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf" id="687ACCB3-7B35-EC37-4694-54AD2477F258">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>C82BC7EF-69C5-7A55-6E0D-51AD56BA29D8</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>40</dataTypeSize>
+<ownDataTypeParameters>40,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dt_nascimento" id="74DA1680-0D3C-50C8-816E-C12FC5E7F814">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>FD356BA1-CB4A-6A2D-DC07-B7147CC80740</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FUNC_ID" id="BEAF3957-0427-DF7A-33A3-EB26823B6BED">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isSurrogateColumn>true</isSurrogateColumn>
+</Column>
+<Column name="LOGRADOURO_LOG_ID" id="7A602102-F49F-EE66-AF74-653C63DE51B7">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B6BC324D-94CA-2A6C-9217-92C3C6ED1145" referredColumn="C02FF544-2132-3881-FB18-0E962B1DD73E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AE4C41FA-CE84-A363-1193-F1237915CF64" name="FUNC_PK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<indexColumnUsage>
+<colUsage columnID="BEAF3957-0427-DF7A-33A3-EB26823B6BED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="72DFD0D2-25E3-880C-943D-496A4C1476BC" name="FUNC_LOGRADOURO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>6D14D22C-0366-4861-891A-BD58080BCE9C</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A602102-F49F-EE66-AF74-653C63DE51B7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

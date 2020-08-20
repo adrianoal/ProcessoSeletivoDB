@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3F1EAC3D-AA16-77EC-7346-40EFD685A473" name="ASTRO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="492A4323-FDE7-BB8B-D7D2-D933B74FA526" name="CLIENTE">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-13 21:35:32 UTC</createdTime>
+<createdTime>2020-08-17 18:21:38 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -14,25 +14,11 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<shortName>AST</shortName>
+<shortName>CLI</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nome" id="824EF70F-E31E-14E0-156C-6853DE4CD6FC">
+<Attribute name="nome" id="40960BB8-BFFB-95F5-08B0-BD4BE1FE4136">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-13 21:35:32 UTC</createdTime>
-<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
-<importedID>EE2F3A31-3746-F191-A67B-7EAA7C2D5188</importedID>
-<engineerTo>
-<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="nome_autor" id="687A7E62-386E-65A4-F258-B730ABF3DC80">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-08-17 18:50:23 UTC</createdTime>
+<createdTime>2020-08-17 18:21:46 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -43,18 +29,43 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="dt_nascimento" id="BF78ABA1-34E6-8FE8-2B6A-A9A32B426CEE">
+<Attribute name="cpf" id="CB71D1A0-F1A1-E956-98C6-AE74FFE427CB">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-17 18:50:50 UTC</createdTime>
+<createdTime>2020-08-17 18:22:00 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="72F92781-BEB8-C50B-70E5-28D318CAB05E">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-17 18:22:23 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="email" id="EA7D591C-D243-249E-DC2C-563C97660C8F">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-17 19:02:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

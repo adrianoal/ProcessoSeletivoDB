@@ -1,0 +1,65 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="C77E49CE-AF06-32DB-3563-BB8655649078" name="LOCACAO_PRODUTO">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>748952A9-17C6-BACD-F532-882A5B87806A</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<abbreviation>LOCP</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOCACAO_LOC_ID" id="6787FBE0-3F80-6696-48C7-C0F85E35B1F5">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8B001B47-AE64-654E-331A-7D2137E44A8A" referredColumn="7CB422D9-A351-EFF8-B6A7-354A58A5768C"/>
+</associations>
+</Column>
+<Column name="ESTOQUE_EST_ID" id="09C43D98-41AD-FE44-715B-3F3250CBD116">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2C309975-3405-AD9A-F21F-FFF08159DDAE" referredColumn="86E35007-4075-E746-E25C-B432AB500F2D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E6E6835-8BC9-64ED-50DC-083493026817" name="LOCACAO_PRODUTO_LOCACAO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>D8C965BC-DF9F-3DF8-86D8-ADACFDBB083D</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6787FBE0-3F80-6696-48C7-C0F85E35B1F5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="94E550C1-7DA4-46AE-174A-20C1D5BAED99" name="LOCACAO_PRODUTO_ESTOQUE_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>971E54AB-E5A2-7ED0-FAEE-045D68B14BE4</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09C43D98-41AD-FE44-715B-3F3250CBD116"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

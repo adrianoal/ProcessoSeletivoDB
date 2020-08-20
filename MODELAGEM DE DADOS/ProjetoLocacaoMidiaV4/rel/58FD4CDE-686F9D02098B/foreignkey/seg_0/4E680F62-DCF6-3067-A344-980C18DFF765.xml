@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="4E680F62-DCF6-3067-A344-980C18DFF765" containerWithKeyObject="8961ED75-39A8-96E1-8393-279B6303DD27" localFKIndex="8799E76B-B76C-57A1-3DCA-541651428759" name="CLIENTE_VIDEO_CLUBE_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>68324F26-A1F3-5753-5578-E36969BE2AB8</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<referredTableLongName>VIDEO_CLUBE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D4C3D17D-C367-D68E-DDDA-C7AB94F1C807</referredTableID>
+<keyObject>E3CD6C26-78AB-5CF7-33C1-E97874302ECD</keyObject>
+<referredKeyID>E3CD6C26-78AB-5CF7-33C1-E97874302ECD</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>VIDC_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

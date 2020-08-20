@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4DDF1291-C0D2-4EB2-F82D-D4BE5C49438D" name="LOCACAO_ENTREGA">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>DC06CE37-D482-F710-0589-8E4EBE3BCB8F</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ENTREGA_ENT_ID" id="01EE14CC-3AA1-5520-37AE-A748CF18AAA2">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EEA8ADF2-E112-10DB-8579-CF86ECB9CC5F" referredColumn="07B42C0D-3FA7-E0D0-956D-72AF6A73BF73"/>
+</associations>
+</Column>
+<Column name="LOCACAO_LOC_ID" id="36BCFD0C-21B8-AFC0-E685-3D97F7189F3F">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="157392A7-6244-085D-8917-F2D6D9C922A8" referredColumn="7CB422D9-A351-EFF8-B6A7-354A58A5768C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9F5E4259-5C31-F04D-F42A-B8563BFB2F59" name="LOCACAO_ENTREGA_ENTREGA_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>B093D2FD-D2D1-D038-47D4-D4B26E7F37A4</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="01EE14CC-3AA1-5520-37AE-A748CF18AAA2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3DDA75E0-5033-2444-956A-990AA3D525E3" name="LOCACAO_ENTREGA_LOCACAO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>24AAD3A9-E110-0F3B-B377-34A534E349DB</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36BCFD0C-21B8-AFC0-E685-3D97F7189F3F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

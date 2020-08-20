@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A2EED445-4182-1400-C8A4-CE8EAB2E9433" containerWithKeyObject="8961ED75-39A8-96E1-8393-279B6303DD27" localFKIndex="27FC0031-647D-2898-DC0C-4E22ADE0DD3C" name="CLIENTE_LOGRADOURO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>2B253217-B06E-9BD7-1071-6C1F7E2367AB</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<referredTableLongName>LOGRADOURO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E88CD395-8860-B357-CBBD-28E4E53E2501</referredTableID>
+<keyObject>0E423F23-F0D3-9741-D602-4A45BD3CCE44</keyObject>
+<referredKeyID>0E423F23-F0D3-9741-D602-4A45BD3CCE44</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>LOG_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

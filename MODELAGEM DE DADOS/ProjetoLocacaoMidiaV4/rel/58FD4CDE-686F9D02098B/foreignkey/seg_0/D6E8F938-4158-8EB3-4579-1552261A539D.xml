@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D6E8F938-4158-8EB3-4579-1552261A539D" containerWithKeyObject="372AE0BA-1945-2666-0D8D-F63CF1EBF57F" localFKIndex="17A67E4C-A1BB-B605-1164-B0EF34DC6DE6" name="ESTOQUE_FORMATO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>27F42CE4-8E27-6F45-B4DE-52578C1293A2</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<referredTableLongName>FORMATO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>77BD7C56-2BE9-E179-4C24-2576DFC94530</referredTableID>
+<keyObject>158AB3B7-6801-371F-E9AF-EF891D04150D</keyObject>
+<referredKeyID>158AB3B7-6801-371F-E9AF-EF891D04150D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>FORM_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

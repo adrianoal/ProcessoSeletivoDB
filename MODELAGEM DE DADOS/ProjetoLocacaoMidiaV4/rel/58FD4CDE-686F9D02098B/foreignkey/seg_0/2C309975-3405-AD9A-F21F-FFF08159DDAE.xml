@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="2C309975-3405-AD9A-F21F-FFF08159DDAE" containerWithKeyObject="C77E49CE-AF06-32DB-3563-BB8655649078" localFKIndex="94E550C1-7DA4-46AE-174A-20C1D5BAED99" name="LOCACAO_PRODUTO_ESTOQUE_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>971E54AB-E5A2-7ED0-FAEE-045D68B14BE4</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<referredTableLongName>ESTOQUE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>372AE0BA-1945-2666-0D8D-F63CF1EBF57F</referredTableID>
+<keyObject>7827435F-347F-445E-1A23-CD6753BDA17E</keyObject>
+<referredKeyID>7827435F-347F-445E-1A23-CD6753BDA17E</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>EST_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

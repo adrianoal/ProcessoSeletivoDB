@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6D9B4C85-791A-0EF6-1838-A838342FC189" containerWithKeyObject="372AE0BA-1945-2666-0D8D-F63CF1EBF57F" localFKIndex="888ED363-E190-3BED-0ABF-F31453737B38" name="ESTOQUE_ASTRO_FK">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:42:24 UTC</createdTime>
+<generatorID>FAAE91D2-7F6D-2BA3-787A-FC445E62B6E7</generatorID>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<referredTableLongName>ASTRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6A855440-F0D7-CED9-796B-A7511A288EB8</referredTableID>
+<keyObject>76D24A2E-32AD-A394-0414-636DF329A8D8</keyObject>
+<referredKeyID>76D24A2E-32AD-A394-0414-636DF329A8D8</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>AST_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

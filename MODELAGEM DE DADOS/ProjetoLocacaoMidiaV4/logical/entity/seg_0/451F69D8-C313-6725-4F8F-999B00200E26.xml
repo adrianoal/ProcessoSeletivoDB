@@ -82,7 +82,7 @@
 <logicalDatatype>LOGDT019</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ultima_atualizacao" id="1C2B266F-6A50-7E71-6E9B-3B4EC9378E6B">
+<Attribute name="usuario" id="1C2B266F-6A50-7E71-6E9B-3B4EC9378E6B">
 <createdBy>aalima5</createdBy>
 <createdTime>2020-08-14 17:42:50 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
@@ -102,11 +102,25 @@
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
 </engineerTo>
+<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>30</dataTypeSize>
 <ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="est_cod" id="D073D49F-7801-6254-8E8A-FAE3D96B6E59">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 13:43:15 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>

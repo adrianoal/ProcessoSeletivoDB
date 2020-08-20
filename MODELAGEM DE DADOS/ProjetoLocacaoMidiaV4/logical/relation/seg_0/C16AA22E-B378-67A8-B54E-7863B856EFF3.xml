@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="CLIENTE_TELEFONE" directorySegmentName="seg_0" id="C16AA22E-B378-67A8-B54E-7863B856EFF3">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-17 19:01:06 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>492A4323-FDE7-BB8B-D7D2-D933B74FA526</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>BE6A7FE1-6299-CEC4-624A-40F9D9B3C31B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8E420B1C-076B-E4F9-6F15-EE2CA72CEF95" name="LOCACAO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="87CA04C2-A7DC-6B58-7200-14705B3BE4A8" name="DEVOLUCAO">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-13 21:53:36 UTC</createdTime>
+<createdTime>2020-08-20 14:30:49 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -14,36 +14,11 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
-<shortName>LOC</shortName>
+<shortName>DEV</shortName>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="dt_locacao" id="B847E3EE-D1CC-A1EF-F2C7-5DC07173E2D3">
+<Attribute name="loc_id" id="D88D7B92-AF7B-D8BE-1C5A-C3999EA23807">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-13 21:54:05 UTC</createdTime>
-<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
-<engineerTo>
-<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
-</engineerTo>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="dt_venc" id="690115A0-6EC1-EADC-6F30-15BB01D11FAD">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-08-14 11:29:52 UTC</createdTime>
-<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
-<engineerTo>
-<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
-</engineerTo>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT007</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="cod_produto" id="CBB77CA2-45CC-02C8-B59A-C22A2BA797E0">
-<createdBy>aalima5</createdBy>
-<createdTime>2020-08-14 18:03:11 UTC</createdTime>
+<createdTime>2020-08-20 14:31:18 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -54,9 +29,9 @@
 <dataTypePrecision>18</dataTypePrecision>
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="quantidade" id="FD316EC0-E6EC-849E-92F7-325EB422A470">
+<Attribute name="cliente_cli_id" id="E6C663F3-1600-7EF8-519A-954893906E3C">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-14 18:04:24 UTC</createdTime>
+<createdTime>2020-08-20 14:32:56 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -67,9 +42,9 @@
 <dataTypePrecision>18</dataTypePrecision>
 <ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="preco" id="FD00FE50-11A4-0A82-F968-68E6B5A6FB98">
+<Attribute name="func_func_id" id="FC9DA385-2A2C-5F03-E84B-640F47FEF5AB">
 <createdBy>aalima5</createdBy>
-<createdTime>2020-08-20 13:33:34 UTC</createdTime>
+<createdTime>2020-08-20 14:33:30 UTC</createdTime>
 <ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
 <engineerTo>
 <item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
@@ -77,9 +52,46 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT019</logicalDatatype>
-<dataTypePrecision>10</dataTypePrecision>
-<dataTypeScale>2</dataTypeScale>
-<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_devolucao" id="5DE3BC49-F4A0-E21A-61AD-3E326D7CAF25">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:34:19 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod_produto" id="77F5ED69-5DC9-B535-BAAC-C9FC325CAA5C">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:34:56 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantidade" id="5D150A97-76D6-9919-1684-595A54E7B2CB">
+<createdBy>aalima5</createdBy>
+<createdTime>2020-08-20 14:35:29 UTC</createdTime>
+<ownerDesignName>ProjetoLocacaoMidiaV4</ownerDesignName>
+<engineerTo>
+<item key="58FD4CDE-3810-85B6-6DAD-686F9D02098B" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>18</dataTypePrecision>
+<ownDataTypeParameters>,18,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 </Entity>
